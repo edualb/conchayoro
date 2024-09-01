@@ -14,5 +14,5 @@ jobs:
         uses: "./.github/actions/hello"
         with:
           the-caller: "Myself"
-      - run: echio ${{ steps.step-caller.outputs.random-number }}
+      - run: echo ${{ steps.step-caller.outputs.random-number }}
         shell: bash
