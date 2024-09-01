@@ -17,7 +17,7 @@ jobs:
     - name: frontend install
       run: npm --prefix frontend install
     - name: frontend build
-      run: npm --prefix frontend build
+      run: npm --prefix frontend run build
     - name: upload frontend build
       uses: actions/upload-artifact@v4
       with:
