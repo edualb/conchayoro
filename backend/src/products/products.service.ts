@@ -24,6 +24,12 @@ export class ProductsService {
     return this.productModel.findAll();
   }
 
+  async findByCriteria(criteria: any): Promise<Product[]> {
+    return this.productModel.findAll({
+      where: criteria
+    });
+  }
+
   async findOne(id: string): Promise<Product> {
     return this.productModel.findOne({
       where: {
